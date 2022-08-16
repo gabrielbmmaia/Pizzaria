@@ -6,77 +6,121 @@ import java.util.Scanner;
 
 public class Pizza {
 
-    private String tamanho;
+    private int tamanho;
     private int sabor;
-    private boolean bordaRecheada = false;
+    private int bordaRecheada;
     private double valor;
+
     private String ingredientes;
 
     public String getIngredientes() {
-        return ingredientes;
+        switch (this.sabor){
+            case 1:
+                System.out.println("Molho de Tomate - Mussarela - Pepperoni");
+            case 2:
+                System.out.println("Molho de Tomate - Mussarela - Parmesão - Provolone - Gorgonzola");
+            case 3 :
+                System.out.println("Molho de Tomate - Mussarela - Calabresa - Cebola");
+            case 4:
+                System.out.println("Molho de Tomate - Mussarela - Frango Desfiado - Catupiry - Cebola");
+            case 5:
+                System.out.println("Molho de Tomate - Mussarela - Tomate - Mangericão");
+        }   return null;
     }
 
-    /*public double getValor() {
-        switch (sabor) {
-            case 1:
-
-
-        }
-    }*/
-
-
-    public void setIngredientes(String ingredientes) {
-        ;
+    public double getValor() {
+        return this.valor;
     }
 
     public String getTamanho() {
-        return tamanho;
+        switch (this.tamanho){
+            case 1:
+                System.out.println("Pequena");
+            case 2:
+                System.out.println("Média");
+            case 3:
+                System.out.println("Grande");
+            case 4:
+                System.out.println("Família");
+        }
+        return null;
     }
 
-    public void setTamanho(String tamanho) {
-        this.tamanho = tamanho;
+    public void setTamanho(int tamanho) {
+        switch(tamanho){
+            case 1:
+                this.tamanho = tamanho;
+                this.valor += 15;
+            case 2:
+                this.tamanho = tamanho;
+                this.valor += 20;
+            case 3:
+                this.tamanho = tamanho;
+                this.valor += 25;
+            case 4:
+                this.tamanho = tamanho;
+                this.valor += 30;
+        }
     }
+
+    public void setSabor(int sabor) {
+        switch (this.sabor){
+            case 1:
+                this.sabor = sabor;
+                this.valor += 15;
+                break;
+            case 2:
+                this.sabor = sabor;
+                this.valor += 15;
+                break;
+            case 3:
+                this.sabor = sabor;
+                this.valor += 5;
+                break;
+            case 4:
+                this.sabor = sabor;
+                this.valor += 10;
+                break;
+            case 5:
+                this.sabor = sabor;
+                this.valor += 5;
+                break;
+
+        }
+
+    }
+
 
     public String getSabor() {
         switch (this.sabor) {
             case 1:
                 System.out.println("Pepperoni");
-                this.valor += 15;
                 break;
             case 2:
                 System.out.println("Quatro Queijos");
-                this.valor += 15;
                 break;
             case 3:
                 System.out.println("Calabresa");
-                this.valor += 10;
                 break;
             case 4:
-                System.out.println("Alho e Óleo");
-                this.valor += 5;
+                System.out.println("Frango e Catupiry");
                 break;
             case 5:
-                System.out.println("Frango e Catupiry");
-                this.valor += 10;
-                break;
-            case 6:
                 System.out.println("Marguerita");
-                this.valor += 5;
                 break;
         }
         return null;
     }
 
 
-    public boolean getBordaRecheada() {
-        if (bordaRecheada) {
-            System.out.println("Borda Recheada");
-            return true;
+    public String getBordaRecheada() {
+        if (bordaRecheada == 2) {
+            return "Borda Recheada";
         }
-        return false;
+        return "Sem Borda Recheda";
     }
 
-    public void setBordaRecheada(boolean bordaRecheada) {
+    public void setBordaRecheada(int bordaRecheada) {
         this.bordaRecheada = bordaRecheada;
     }
 }
