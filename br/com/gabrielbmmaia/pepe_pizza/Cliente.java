@@ -1,7 +1,6 @@
 package br.com.gabrielbmmaia.pepe_pizza;
 
 public class Cliente {
-    private int numeroCliente;
     private String nome;
     private String rua;
     private int numero;
@@ -9,9 +8,6 @@ public class Cliente {
     private String contato;
 
 
-    public void setNumeroCliente(int numeroCliente) {
-        this.numeroCliente = numeroCliente;
-    }
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -29,9 +25,6 @@ public class Cliente {
         this.complemento = complemento;
     }
 
-    public int getNumeroCliente() {
-        return numeroCliente;
-    }
 
     public String getNome() {
         return nome;

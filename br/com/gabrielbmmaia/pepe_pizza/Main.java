@@ -4,10 +4,12 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static int resposta;
         public static void main(String[] args) {
 
+            System.out.println("-----------------------------------");
+            System.out.println("---> Bem-Vindo a Pizzaria Pepe <---");
             Pedido pedido = new Pedido();
             pedido.fazerPedido();
-    }
+            System.out.println(pedido.pizza.getValor());
+        }
 }
