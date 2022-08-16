@@ -1,8 +1,6 @@
 package br.com.gabrielbmmaia.pepe_pizza;
 
-import org.w3c.dom.ls.LSOutput;
 
-import java.util.Scanner;
 
 public class Pizza {
 
