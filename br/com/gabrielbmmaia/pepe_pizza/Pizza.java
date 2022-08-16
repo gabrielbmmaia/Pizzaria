@@ -9,22 +9,8 @@ public class Pizza {
     private int bordaRecheada;
     private double valor;
 
-    private String ingredientes;
 
-    public String getIngredientes() {
-        switch (this.sabor){
-            case 1:
-                System.out.println("Molho de Tomate - Mussarela - Pepperoni");
-            case 2:
-                System.out.println("Molho de Tomate - Mussarela - Parmesão - Provolone - Gorgonzola");
-            case 3 :
-                System.out.println("Molho de Tomate - Mussarela - Calabresa - Cebola");
-            case 4:
-                System.out.println("Molho de Tomate - Mussarela - Frango Desfiado - Catupiry - Cebola");
-            case 5:
-                System.out.println("Molho de Tomate - Mussarela - Tomate - Mangericão");
-        }   return null;
-    }
+
 
     public double getValor() {
         return this.valor;
