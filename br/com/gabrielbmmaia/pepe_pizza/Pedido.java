@@ -20,6 +20,7 @@ public class Pedido {
         pizza.setSabor(sc.nextInt());
 
         System.out.println("-----------------------------------\n" +
+                            "Valor Atual: "+ pizza.getValor() + "\n" +
                             "-> Agora, qual seria o tamanho da pizza? <-\n" +
                             "1 - Pequena (+ R$ 15,00)\n" +
                             "2 - Média (+ R$ 20,00)\n" +
@@ -39,27 +40,23 @@ public class Pedido {
 
         Cliente cliente = new Cliente();
 
-        System.out.println("-> Agora, precisamos de algumas informações para a entrega <- \n" +
-                            "Informe seu nome: ");
-        cliente.setNome(sc.nextLine());
+        System.out.println("-> Agora, precisamos de algumas informações para a entrega <-");
+        System.out.println("Informe seu nome:");
+        cliente.setNome(sc.next());
 
-        System.out.println("Informe seu bairro: ");
-        cliente.setBairro(sc.nextLine());
+        System.out.println("Informe seu bairro:");
+        cliente.setBairro(sc.next());
 
-        System.out.println("Informe sua rua: ");
-        cliente.setRua(sc.nextLine());
+        System.out.println("Informe sua rua:");
+        cliente.setRua(sc.next());
 
-        System.out.println("Informe o número da edificação: ");
+        System.out.println("Informe o número da edificação:");
         cliente.setNumero(sc.nextInt());
 
-        System.out.println("Complemento: ");
-        cliente.setComplemento(sc.nextLine());
+        System.out.println("Complemento:");
+        cliente.setComplemento(sc.next());
 
         System.out.println("Informe um número para contato: ");
-        cliente.setContato(sc.nextLine());
-
-
-
-
+        cliente.setContato(sc.next());
     }
 }

@@ -5,7 +5,9 @@ package br.com.gabrielbmmaia.pepe_pizza;
 public class Pizza {
 
     private int tamanho;
+    private String escolhaTamanho;
     private int sabor;
+    private String escolhaSabor;
     private int bordaRecheada;
     private static double valor = 0;
 
@@ -16,19 +18,19 @@ public class Pizza {
     public String getTamanho() {
         switch (this.tamanho){
             case 1:
-                System.out.println("Pequena");
+                this.escolhaTamanho = "Pequena";
                 break;
             case 2:
-                System.out.println("Média");
+                this.escolhaTamanho = "Média";
                 break;
             case 3:
-                System.out.println("Grande");
+                this.escolhaTamanho = "Grande";
                 break;
             case 4:
-                System.out.println("Família");
+                this.escolhaTamanho = "Família";
                 break;
         }
-        return null;
+        return this.escolhaTamanho;
     }
 
     public void setTamanho(int tamanho) {
@@ -69,22 +71,22 @@ public class Pizza {
     public String getSabor() {
         switch (this.sabor) {
             case 1:
-                System.out.println("Pepperoni");
+                this.escolhaSabor = "Pepperoni";
                 break;
             case 2:
-                System.out.println("Quatro Queijos");
+                this.escolhaSabor = "Quatro Queijos";
                 break;
             case 3:
-                System.out.println("Frango e Catupiry");
+                this.escolhaSabor = "Frango e Catupiry";
                 break;
             case 4:
-                System.out.println("Calabresa");
+                this.escolhaSabor = "Calabresa";
                 break;
             case 5:
-                System.out.println("Marguerita");
+                this.escolhaSabor = "Marguerita";
                 break;
         }
-        return null;
+        return this.escolhaSabor;
     }
 
 
