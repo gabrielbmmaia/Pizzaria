@@ -9,6 +9,7 @@ public class Pedido {
     Scanner sc = new Scanner(System.in);
 
     public void fazerPedido() {
+
         System.out.println("-----------------------------------\n" +
                             "-> Este é nosso cardápio! Deseja qual sabor? <-\n\n" +
                             "1 - Pepperoni (+ R$ 15,00) \n(Molho de Tomate - Mussarela - Pepperoni)\n" +
@@ -17,6 +18,7 @@ public class Pedido {
                             "4 - Calabresa (+ R$ 5,00)\n(Molho de Tomate - Mussarela - Calabresa - Cebola)\n" +
                             "5 - Marguerita (+ R$ 5,00)\n(Molho de Tomate - Mussarela - Tomate - Mangericão)");
         pizza.setSabor(sc.nextInt());
+
         System.out.println("-----------------------------------\n" +
                             "-> Agora, qual seria o tamanho da pizza? <-\n" +
                             "1 - Pequena (+ R$ 15,00)\n" +
@@ -24,14 +26,39 @@ public class Pedido {
                             "3 - Grande (+ R$ 25,00)\n" +
                             "4 - Família (+ R$ 30,00)");
         pizza.setTamanho(sc.nextInt());
+
         System.out.println("-----------------------------------\n" +
                             "-> Gostaria de Borda Recheda ? <-\n" +
                             "1 - Sem Borda Recheada\n" +
                             "2 - Com Borda Recheada (+ R$ 5,00)");
         pizza.setBordaRecheada(sc.nextInt());
+
         System.out.println("-----------------------------------");
         System.out.println("Total do pedido: " + pizza.getValor());
         System.out.println("-----------------------------------");
+
+        Cliente cliente = new Cliente();
+
+        System.out.println("-> Agora, precisamos de algumas informações para a entrega <- \n" +
+                            "Informe seu nome: ");
+        cliente.setNome(sc.nextLine());
+
+        System.out.println("Informe seu bairro: ");
+        cliente.setBairro(sc.nextLine());
+
+        System.out.println("Informe sua rua: ");
+        cliente.setRua(sc.nextLine());
+
+        System.out.println("Informe o número da edificação: ");
+        cliente.setNumero(sc.nextInt());
+
+        System.out.println("Complemento: ");
+        cliente.setComplemento(sc.nextLine());
+
+        System.out.println("Informe um número para contato: ");
+        cliente.setContato(sc.nextLine());
+
+
 
 
     }

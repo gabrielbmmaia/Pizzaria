@@ -3,11 +3,27 @@ package br.com.gabrielbmmaia.pepe_pizza;
 public class Cliente {
     private String nome;
     private String rua;
+    private String bairro;
     private int numero;
     private String complemento;
     private String contato;
 
 
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+    public String getContato() {
+        return contato;
+    }
+
+    public void setContato(String contato) {
+        this.contato = contato;
+    }
 
     public void setNome(String nome) {
         this.nome = nome;
