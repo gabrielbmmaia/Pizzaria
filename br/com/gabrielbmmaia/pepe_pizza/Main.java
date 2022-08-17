@@ -10,6 +10,5 @@ public class Main {
             System.out.println("---> Bem-Vindo a Pizzaria Pepe <---");
             Pedido pedido = new Pedido();
             pedido.fazerPedido();
-            System.out.println(pedido.pizza.getValor());
         }
 }
