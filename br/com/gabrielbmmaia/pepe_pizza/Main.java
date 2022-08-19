@@ -10,6 +10,10 @@ public class Main {
             System.out.println("---> Bem-Vindo a Pizzaria Pepe <---");
 
             Pedido pedido = new Pedido();
-            pedido.fazerPedido();
+            try {
+                pedido.fazerPedido();
+            } catch (OpcaoInvalidaException ex) {
+                System.out.println("Opção Inválida");;
+            }
         }
 }

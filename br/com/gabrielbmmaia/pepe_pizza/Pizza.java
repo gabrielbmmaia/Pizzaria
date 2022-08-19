@@ -52,6 +52,9 @@ public class Pizza {
                 this.valor += 30;
                 break;
         }
+        if(tamanho < 1 | tamanho > 4){
+            throw new OpcaoInvalidaException("Opção Inválida");
+        }
     }
 
     public void setSabor(int sabor) {
@@ -67,6 +70,10 @@ public class Pizza {
             this.sabor = sabor;
             this.valor += 5;
         }
+        if(sabor < 1 | sabor > 5){
+            throw new OpcaoInvalidaException("Opção Inválida");
+        }
+
     }
     public String getSabor() {
         switch (this.sabor) {
@@ -93,7 +100,8 @@ public class Pizza {
     public String getBordaRecheada() {
         if (bordaRecheada == 2) {
             return "Borda Recheada";
-        }else {
+        }
+        else {
             return "Sem Borda Recheda";
         }
     }
@@ -102,6 +110,9 @@ public class Pizza {
         if (bordaRecheada == 2) {
             this.bordaRecheada=bordaRecheada;
             valor += 5;
+        }
+        if(bordaRecheada < 1 | bordaRecheada > 2){
+            throw new OpcaoInvalidaException("Opção Inválida");
         }else {
             this.bordaRecheada = bordaRecheada;
         }
