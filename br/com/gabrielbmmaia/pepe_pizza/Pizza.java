@@ -4,7 +4,7 @@ package br.com.gabrielbmmaia.pepe_pizza;
 
 public class Pizza {
 
-    private int tamanho;
+    private int tamanho = 2;
     private String escolhaTamanho;
     private int sabor;
     private String escolhaSabor;
